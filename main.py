@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture("img/eyes_data.mp4")
+cap = cv2.VideoCapture(0)
 
 while (True):
     
