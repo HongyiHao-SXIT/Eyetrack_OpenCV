@@ -89,7 +89,7 @@ class PupilDetector:
 
 def main():
     detector = PupilDetector()
-    cap = cv2.VideoCapture(1)  # 打开默认摄像头
+    cap = cv2.VideoCapture(0)  # 打开默认摄像头
     
     while True:
         ret, frame = cap.read()

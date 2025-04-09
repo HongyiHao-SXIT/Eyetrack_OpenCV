@@ -124,7 +124,7 @@ class PupilDetectionApp(QMainWindow):
 
     def start_tracking(self):
         try:
-            self.cap = cv2.VideoCapture(1)
+            self.cap = cv2.VideoCapture(0)
             if not self.cap.isOpened():
                 raise Exception("无法打开摄像头，请检查设备连接。")
             self.is_tracking = True
