@@ -21,8 +21,17 @@ cap = cv2.VideoCapture('img/eyes_data.mp4')
 # 模拟显示画面设置 (11.0cm x 9.0cm)
 display_width, display_height = 440, 360  # 假设1cm=40像素
 display_img = np.zeros((display_height, display_width, 3), dtype=np.uint8)
-controlled_img = np.zeros((50, 50, 3), dtype=np.uint8)  # 被控制的图片
-controlled_img[:] = (0, 0, 255)  # 红色方块表示被控制的对象
+
+# 读取本地图片
+image_path = 'img/face.jpg'  # 请将此路径替换为实际的图片路径
+controlled_img = cv2.imread(image_path)
+if controlled_img is None:
+    print("无法读取图片，请检查图片路径。")
+    exit()
+
+# 调整图片大小
+controlled_img = cv2.resize(controlled_img, (50, 50))
+
 controlled_pos = np.array([display_width//2, display_height//2], dtype=np.float32)  # 使用浮点数提高精度
 
 # 初始化前一帧的瞳孔位置
