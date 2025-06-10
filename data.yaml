@@ -1,10 +1,7 @@
-# dataset path
-train:  \Dataset\images\train
-val:  \Dataset\images\val
-test:  \Dataset\images\test
+# data.yaml（修改后）
+train: C:/Users/Lanyi/Desktop/Project/Eyetrack_Fursuit/Dataset/images/train
+val: C:/Users/Lanyi/Desktop/Project/Eyetrack_Fursuit/Dataset/images/val
+test: C:/Users/Lanyi/Desktop/Project/Eyetrack_Fursuit/Dataset/images/test
 
-# number of classes
 nc: 2
-
-# class names
 names: ['eyeball', 'pupil']

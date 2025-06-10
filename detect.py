@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 
-model_path = 'YOLOv11\\runs\\train\\train-200epoch-v11n.yaml\\weights\\last.pt'
+model_path = 'YOLOv11\\runs\\train\\train-200epoch-v11n.yaml\\weights\\best.pt'
 model = YOLO(model_path)
 
 cap = cv2.VideoCapture('images\eye_data.mp4')
