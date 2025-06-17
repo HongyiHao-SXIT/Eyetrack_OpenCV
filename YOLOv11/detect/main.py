@@ -2,9 +2,9 @@ import cv2
 import pygame
 import os
 from threading import Thread
-from yolo_utils import PupilDetector
+from YOLOv11.detect.yolo_utils import PupilDetector
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(1, cv2.CAP_DSHOW)
 image_scale = 1
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 800)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 650)

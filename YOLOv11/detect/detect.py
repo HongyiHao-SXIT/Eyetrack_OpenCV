@@ -5,7 +5,7 @@ from ultralytics import YOLO
 model_path = 'YOLOv11\\runs\\train\\train-200epoch-v11n.yaml\\weights\\best.pt'
 model = YOLO(model_path)
 
-cap = cv2.VideoCapture('images\eye_data.mp4')
+cap = cv2.VideoCapture(1)
 
 if not cap.isOpened():
     print("Error opening camera")
